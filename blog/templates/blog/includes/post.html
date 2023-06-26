@@ -3,11 +3,10 @@
 <li>
   <article class="post">
     <a href="{% url "post-detail-page" "the-mountains" %}">
-      <img src="{% static "blog/images/mountains.jpg" %}" alt=" mountain
-      hiking">
+      <img src="{% static "blog/images/"|add:post.image %%}" alt=" mountain hiking">
       <div ="post__content">
-        <h3>Mountain hiking</h3>
-        <p>Here goes some sample text. Etc etc etc</p>
+        <h3>{{ post.title }}</h3>
+        <p> {{ post.excerpt }} </p>
       </div>
     </a>
   </article>
